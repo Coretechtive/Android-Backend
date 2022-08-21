@@ -27,9 +27,9 @@ app.use('/api/bookParking', require('./routes/bookParkingRoutes'))
 app.use("/api", require('./routes/paymentRoutes'));
 
 
-// app.get('/', (req, res) => {
-//     res.sendFile(__dirname + '/index.html')
-// })
+app.get('/', (req, res) => {
+    res.json({message: "Application Hosted"})
+})
 
 // app.post('/sendmessage', async (req, res) => {
 //     const otp = Math.floor((Math.random() * 10000));
