@@ -3,12 +3,14 @@ const fast2sms = require('fast-two-sms')
 const bodyparser = require('body-parser')
 const OtpSchema = require('./models/OtpSchema');
 const connectToMongo = require('./config/database');
+var cors = require('cors')
 
 connectToMongo()
 
 const app = express();
 const { PORT } = process.env;
 
+app.use(cors())
 app.use(express.json())
 
 app.use(bodyparser.urlencoded({ extended: false }))
